@@ -1,0 +1,3 @@
+.env
+docker-compose.yaml
+test_consumer.py
