@@ -12,8 +12,8 @@ services:
     build: .
     networks:
     - "rabbitnet"
-    environment:
-      - "RABBITMQ-HOST:rabbitmq
+    env_file:
+      - .env
 
 networks:
   rabbitnet:
