@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3"
+    networks:
+    - "rabbitnet"
+    ports:
+      - "5672:5672"
+
+  client_app:
+    build: .
+    networks:
+    - "rabbitnet"
+    environment:
+      - "RABBITMQ-HOST:rabbitmq
+
+networks:
+  rabbitnet:
